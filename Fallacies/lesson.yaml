@@ -43,25 +43,35 @@
 
 - Class: text_question
   Output: 
-      Your task is to rewrite this paragraph as a set of premises and conclusions, one 
-      at a time. Type your premises as strings in the command row. While we don't have an
+      Write the argument that this paragraph makes as a set of premises and conclusions,  
+      one at a time. Type your premises in the command row. While we don't have an
       auto check for your responses, please do this exercise responsibly! After you are
-      done with your argument, type Next to continue! Please ignore the automatic prompts
+      done with your argument, type Next to continue! Please disregard the automatic prompts
       in this question :)
-  CorrectAnswer: 
+  CorrectAnswer: NULL
   AnswerTests: omnitest(correctVal='Next')
   Hint: When your argument is complete, type Next to continue!
 
-- Class: text_question
+- Class: text
   Output: Good job! Let's now take a look at how we interpreted the argument. Please
       note any similarities and differences with your interpretation!
-      1. The dying person can either depart this earth with dignity or endure the
+
+- Class: text
+  Output: 1. The dying person can either depart this earth with dignity or endure the
       inexorable stripping away of their physical and mental faculties.
-      2. Terminally ill people should rather die on their terms than at the end of 
+    
+- Class: text
+  Output: 2. Terminally ill people should rather die on their terms than at the end of 
       prolonged agonies.
-      3. Some people would prefer easing what seems like pointless pain and suffering.
-      4. Therefore, assisted suicide for terminally ill is a justified form of mercy.
-      What fallacy does this argument rely on? 
+  
+- Class: text
+  Output: 3. Some people would prefer easing what seems like pointless pain and suffering.
+  
+- Class: text
+  Output: 4. Therefore, assisted suicide for terminally ill is a justified form of mercy.
+
+- Class: text_question
+  Output: What fallacy does this argument rely on? 
       Please type the fallacy name **in lowercase**!
   CorrectAnswer: "straw man"
   AnswerTests: omnitest(correctVal='straw man')
