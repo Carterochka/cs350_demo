@@ -1,0 +1,98 @@
+- Class: meta
+  Course: CS350
+  Lesson: Session 7 - Fallacy Detection
+  Author: Nikita Koloskov (M23)
+  Type: Standard
+  Organization: Minerva University
+  Version: 0.1
+  
+- Class: text
+  Output: Welcome to the first Swirl lesson for CS350. Swirl teaches you 
+      R programming interactively from your console in RStudio. To do 
+      this part of the assignment, follow these steps and let us know 
+      if you run into any issues. At the end of the exercise, when you 
+      complete all steps, you will get a unique code that you have to 
+      paste in the Google Forms link provided at the end of the exercise 
+      including your name. Please note that you can use the function 
+      rpt() to go back to the previous question. To end your Swirl session,
+      you can type bye(). After you exit a lesson, you can always resume
+      a lesson by typing swirl() again. However, make sure you use the same 
+      name you always use! Press any key to continue!
+
+- Class: text
+  Output: This is your first swirl lesson. You might run into issues in the
+      beginning but once you resolve them, you should be good for the rest of
+      the semester. You should let us or the TA know if you run into issues
+      that you cannot resolve. Press any key to continue!
+
+- Class: text
+  Output: We can relax today - instead of coding in R, this first swirl exercise will
+      focus on interpreting the natural language arguments. After you proceed to the
+      next step, you will see the excerpt from the preparation resource for today's 
+      class. Read it carefully again - your task will be to infer the argument that is 
+      made in this paragraph. Press any key to continue!
+
+- Class: text
+  Output:
+      "The case for assisted suicide seems to depend on human sympathy — on the impulse 
+      toward mercy, the desire to ease what seems like pointless pain and suffering. Why
+      shouldn’t the terminally ill meet death on their own terms, rather than at the end 
+      of prolonged agonies? Why shouldn’t the dying depart this earth with dignity,
+      instead of enduring the inexorable stripping away of their physical and mental 
+      faculties?"
+
+- Class: text_question
+  Output: 
+      Your task is to rewrite this paragraph as a set of premises and conclusions, one 
+      at a time. Type your premises as strings in the command row. While we don't have an
+      auto check for your responses, please do this exercise responsibly! After you are
+      done with your argument, type Next to continue! Please ignore the automatic prompts
+      in this question :)
+  CorrectAnswer: 
+  AnswerTests: omnitest(correctVal='Next')
+  Hint: When your argument is complete, type Next to continue!
+
+- Class: text_question
+  Output: Good job! Let's now take a look at how we interpreted the argument. Please
+      note any similarities and differences with your interpretation!
+      1. The dying person can either depart this earth with dignity or endure the
+      inexorable stripping away of their physical and mental faculties.
+      2. Terminally ill people should rather die on their terms than at the end of 
+      prolonged agonies.
+      3. Some people would prefer easing what seems like pointless pain and suffering.
+      4. Therefore, assisted suicide for terminally ill is a justified form of mercy.
+      What fallacy does this argument rely on? 
+      Please type the fallacy name **in lowercase**!
+  CorrectAnswer: "straw man"
+  AnswerTests: omnitest(correctVal='straw man')
+  Hint: Not quite! Are the claims attacked in the premises and conclusion the same?
+
+- Class: text_question
+  Output: Indeed! Preference of some group of people do make some action doesn't justify
+      this action for everybody.
+      Let's now have a closer look on one of the premises.
+      • Terminally ill people should rather die on their terms than at the end of 
+      prolonged agonies.
+      Can you identify the fallacy here?
+      Please type the fallacy name in lowercase!
+  CorrectAnswer: "false dichotomy"
+  AnswerTests: omnitest(correctVal='false dichotomy')
+  Hint: Not quite! Are the options presented in the claim indeed the only options 
+      available?
+
+- Class: text
+  Output: Oh yes! It would be quite sad to have a binary choice like in this premise...
+      Press any key to continue!
+
+- Class: text
+  Output: Congratulations! You have finished your first lesson in swirl. In the next step, 
+      there will be a unique code generated for you. You should copy and paste the code 
+      in the google form link that is provided to you and submit your pre-class work.
+      You are responsible to correctly spell your name. 
+
+- Class: mult_question
+  Output: "Would you like the code-generator to generate a code for you?"
+  AnswerChoices: Yes;No
+  CorrectAnswer: NULL
+  AnswerTests: cs112_credit(941, "s07")
+  Hint: 
