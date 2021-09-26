@@ -90,5 +90,14 @@
        return(TRUE)
     }
  } 
+
+
+ check_means_array <- function(arr) {
+    if (length(arr) == 5000 & round(quantile(arr), 2)[2] == 0.85 & round(quantile(arr), 2)[4] == 1.15) {
+       return(TRUE)
+    } else {
+       return(FALSE)
+    }
+ }
  
  

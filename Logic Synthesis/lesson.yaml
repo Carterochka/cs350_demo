@@ -1,0 +1,92 @@
+- Class: meta
+  Course: CS350
+  Lesson: Session 8 - Logic Synthesis
+  Author: Nikita Koloskov (M23)
+  Type: Standard
+  Organization: Minerva University
+  Version: 0.1
+  
+- Class: text
+  Output: Welcome to the second Swirl lesson for CS350. Swirl teaches you 
+      R programming interactively from your console in RStudio. To do 
+      this part of the assignment, follow these steps and let us know 
+      if you run into any issues. At the end of the exercise, when you 
+      complete all steps, you will get a unique code that you have to 
+      paste in the Google Forms link provided at the end of the exercise 
+      including your name. Please note that you can use the function 
+      rpt() to go back to the previous question. To end your Swirl session,
+      you can type bye(). After you exit a lesson, you can always resume
+      a lesson by typing swirl() again. However, make sure you use the same 
+      name you always use! Press any key to continue!
+
+- Class: text
+  Output: This exercise is based on the work you've done for Session 6 - Induction.
+      You might run into issues in the beginning but once you resolve them, you 
+      should be good for the rest of the semester. You should let us or the TA know 
+      if you run into issues that you cannot resolve. Press any key to continue!
+
+- Class: text
+  Output: You should be able to see two plots on the right side of your screen 
+      right now - the histogram and the density plot for the population we've created 
+      for you. Use arrows above the plots to switch between them. The population is 
+      stored in the variable called "population". In this exercise, you will need 
+      to sample from this population multiple times, find the mean of each sample, 
+      and calculate the interquartile range of all these samples. 
+      Press any key to continue!
+
+- Class: cmd_question
+  Output: First, create an empty array where you will store the sample means. Store it
+      in the variable 'means'.
+  CorrectAnswer: means <- c()
+  AnswerTests: any_of_exprs('means <- c()', 'means = c()')
+  Hint: Use c() to create an array!
+ 
+- Class: cmd_question
+  Output: Great! Now let's do some sampling. We have created a function 'sample_fn'
+      that takes two arguments - sample_size and data. Your task is to write a for loop
+      that uses this function to create 5000 samples with 20 observations in each sample,
+      and save the mean of each sample in your variable means.
+  CorrectAnswer: for (i in 1:5000) {means[i] <- sample_fn(20)}
+  AnswerTests: check_means_array(means)
+  Hint: Your array doesn't look correct. Please try again!
+
+- Class: cmd_question
+  Output: Good job! Now use the quantile() function to calculate the interquartile
+      range of your sample means. Make sure to round your numbers to the hundredths 
+      place (2 decimal places) using the round() function. Take your time to code!
+      In the next questions you will need to report two numbers that correspond to
+      the lower (25%) and upper (75%) bounds of the interquartile range.
+      When you have your numbers ready, please type "Ready" (as string) to proceed 
+      to the next question!
+  CorrectAnswer: NULL
+  AnswerTests: omnitest(correctVal='Ready')
+  Hint: Your array doesn't look correct. Please try again!
+
+- Class: exact_question
+  Output: 
+      What is the lower bound for the interquartile range?
+  CorrectAnswer: 0.85
+  AnswerTests: omnitest(correctVal=0.85)
+  Hint: Not quite! Check if you made a typo in your response, or type rpt() to start
+      the exercise from scratch and try again!
+
+- Class: exact_question
+  Output: 
+      What is the upper bound for the interquartile range?
+  CorrectAnswer: 1.15
+  AnswerTests: omnitest(correctVal=1.15)
+  Hint: Not quite! Check if you made a typo in your response, or type rpt() to start
+      the exercise from scratch and try again!
+
+- Class: text
+  Output: Congratulations! You have finished your second lesson in swirl. In the next step, 
+      there will be a unique code generated for you. You should copy and paste the code 
+      in the google form link that is provided to you and submit your pre-class work.
+      You are responsible to correctly spell your name. 
+
+- Class: mult_question
+  Output: "Would you like the code-generator to generate a code for you?"
+  AnswerChoices: Yes;No
+  CorrectAnswer: NULL
+  AnswerTests: cs112_credit(941, "s08")
+  Hint: 
